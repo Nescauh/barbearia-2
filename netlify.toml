@@ -1,0 +1,10 @@
+[build]
+  command = "npm run build"
+  publish = ".next"
+
+[build.environment]
+  DATABASE_URL = "file:./dev.db"
+  # JWT_SECRET is also needed for auth. 
+  # We can set a default for dev/demo purposes, but ideally this should be secret.
+  # For this demo, we'll set a default to ensure it builds and runs.
+  JWT_SECRET = "default-secret-key-change-me-in-production"
